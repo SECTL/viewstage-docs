@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   vuepress-theme-reco:
-    hash: 88a8eaa793dc104581a169de7a3ce696b627c9e10e362b12eae83b29498c4e39
+    hash: wya72xh2io2zttbu4p5d5xtpye
     path: patches/vuepress-theme-reco.patch
 
 importers:
@@ -33,7 +33,7 @@ importers:
         version: 2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@25.8.0)(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(yaml@2.9.0))(vue@3.5.34)
       vuepress-theme-reco:
         specifier: 2.0.0-rc.26
-        version: 2.0.0-rc.26(patch_hash=88a8eaa793dc104581a169de7a3ce696b627c9e10e362b12eae83b29498c4e39)(@algolia/client-search@5.52.1)(@types/node@25.8.0)(@vueuse/core@13.9.0(vue@3.5.34))(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(search-insights@2.17.3)(terser@5.47.1)(tslib@2.8.1)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@25.8.0)(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(yaml@2.9.0))(vue@3.5.34))(yaml@2.9.0)
+        version: 2.0.0-rc.26(patch_hash=wya72xh2io2zttbu4p5d5xtpye)(@algolia/client-search@5.52.1)(@types/node@25.8.0)(@vueuse/core@13.9.0(vue@3.5.34))(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(search-insights@2.17.3)(terser@5.47.1)(tslib@2.8.1)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@25.8.0)(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(yaml@2.9.0))(vue@3.5.34))(yaml@2.9.0)
 
 packages:
 
@@ -9416,7 +9416,7 @@ snapshots:
       '@vue/server-renderer': 3.5.34(vue@3.5.34)
       '@vue/shared': 3.5.34
 
-  vuepress-theme-reco@2.0.0-rc.26(patch_hash=88a8eaa793dc104581a169de7a3ce696b627c9e10e362b12eae83b29498c4e39)(@algolia/client-search@5.52.1)(@types/node@25.8.0)(@vueuse/core@13.9.0(vue@3.5.34))(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(search-insights@2.17.3)(terser@5.47.1)(tslib@2.8.1)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@25.8.0)(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(yaml@2.9.0))(vue@3.5.34))(yaml@2.9.0):
+  vuepress-theme-reco@2.0.0-rc.26(patch_hash=wya72xh2io2zttbu4p5d5xtpye)(@algolia/client-search@5.52.1)(@types/node@25.8.0)(@vueuse/core@13.9.0(vue@3.5.34))(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(search-insights@2.17.3)(terser@5.47.1)(tslib@2.8.1)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@25.8.0)(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(yaml@2.9.0))(vue@3.5.34))(yaml@2.9.0):
     dependencies:
       '@vuepress-reco/shared': 2.0.0-rc.94(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@25.8.0)(jiti@2.7.0)(lightningcss@1.32.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(yaml@2.9.0))(vue@3.5.34))
       '@vuepress-reco/tailwindcss-config': 2.0.0-rc.94
