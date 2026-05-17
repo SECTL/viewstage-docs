@@ -1,0 +1,43 @@
+<template><div><h1 id="摄像头展台" tabindex="-1"><a class="header-anchor" href="#摄像头展台"><span>摄像头展台</span></a></h1>
+<h2 id="功能概述" tabindex="-1"><a class="header-anchor" href="#功能概述"><span>功能概述</span></a></h2>
+<p>ViewStage 的摄像头展台模块负责实时采集摄像头画面，支持拍照保存、画面旋转、镜像切换等功能。</p>
+<h2 id="核心实现" tabindex="-1"><a class="header-anchor" href="#核心实现"><span>核心实现</span></a></h2>
+<p>摄像头功能位于 <code v-pre>src/main.js</code>，主要管理以下状态：</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre><code><span class="line">state <span class="token operator">=</span> <span class="token punctuation">{</span></span>
+<span class="line">    <span class="token literal-property property">cameraStream</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>        <span class="token comment">// MediaStream 对象</span></span>
+<span class="line">    <span class="token literal-property property">isCameraOpen</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>       <span class="token comment">// 摄像头是否开启</span></span>
+<span class="line">    <span class="token literal-property property">isCameraReady</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>      <span class="token comment">// 视频是否就绪</span></span>
+<span class="line">    <span class="token literal-property property">isMirrored</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>         <span class="token comment">// 是否镜像</span></span>
+<span class="line">    <span class="token literal-property property">cameraRotation</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>         <span class="token comment">// 旋转角度</span></span>
+<span class="line">    <span class="token literal-property property">useFrontCamera</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>     <span class="token comment">// 是否使用前置摄像头</span></span>
+<span class="line">    <span class="token literal-property property">defaultCameraId</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>     <span class="token comment">// 默认设备 ID</span></span>
+<span class="line">    <span class="token literal-property property">cameraWidth</span><span class="token operator">:</span> <span class="token number">1280</span><span class="token punctuation">,</span>         <span class="token comment">// 采集宽度</span></span>
+<span class="line">    <span class="token literal-property property">cameraHeight</span><span class="token operator">:</span> <span class="token number">720</span><span class="token punctuation">,</span>         <span class="token comment">// 采集高度</span></span>
+<span class="line"><span class="token punctuation">}</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="功能列表" tabindex="-1"><a class="header-anchor" href="#功能列表"><span>功能列表</span></a></h2>
+<ul>
+<li><strong>摄像头选择</strong>: 支持多摄像头设备切换（前后置）</li>
+<li><strong>分辨率设置</strong>: 可配置采集分辨率（默认 1280x720）</li>
+<li><strong>画面镜像</strong>: 支持水平镜像翻转</li>
+<li><strong>画面旋转</strong>: 支持 90°、180°、270° 旋转</li>
+<li><strong>拍照保存</strong>: 捕获当前画面并保存到 <code v-pre>~/Pictures/ViewStage/</code> 目录</li>
+<li><strong>降噪处理</strong>: 多帧降噪（可配帧数和强度）</li>
+<li><strong>默认旋转</strong>: 可设置默认旋转角度</li>
+</ul>
+<h2 id="初始化流程" tabindex="-1"><a class="header-anchor" href="#初始化流程"><span>初始化流程</span></a></h2>
+<div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre v-pre><code><span class="line">init_camera()</span>
+<span class="line">  → getUserMedia({ video: { deviceId, width, height } })</span>
+<span class="line">  → 绑定 video 元素</span>
+<span class="line">  → 监听 loadedmetadata</span>
+<span class="line">  → 开始 cameraAnimationId 循环渲染</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="拍照流程" tabindex="-1"><a class="header-anchor" href="#拍照流程"><span>拍照流程</span></a></h2>
+<div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre v-pre><code><span class="line">拍照按钮 → captureFrame()</span>
+<span class="line">  → drawCameraToCanvas()</span>
+<span class="line">  → canvas.toBlob()</span>
+<span class="line">  → 保存到图片列表 / Rust 后端保存文件</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

@@ -1,0 +1,22 @@
+
+> viewstage-docs@0.0.1 docs:build D:\code\viewstage-docs
+> vuepress build docs
+
+- Initializing and preparing data
+鉁?Initializing and preparing data - done in 354ms
+- Compiling with vite
+x Build failed in 2m 33s
+鉁?Compiling with vite - failed in 152.91s
+error node_modules/.pnpm/@vuepress+plugin-search@2.0_116b0e4c95c824337631fb70fdbdfc00/node_modules/@vuepress/plugin-search/lib/client/index.js (4:9): "SEARCH_INDEX" is not exported by "docs/.vuepress/.temp/internal/searchIndex.js", imported by "node_modules/.pnpm/@vuepress+plugin-search@2.0_116b0e4c95c824337631fb70fdbdfc00/node_modules/@vuepress/plugin-search/lib/client/index.js".
+file: D:/code/viewstage-docs/node_modules/.pnpm/@vuepress+plugin-search@2.0_116b0e4c95c824337631fb70fdbdfc00/node_modules/@vuepress/plugin-search/lib/client/index.js:4:9
+    at getRollupError (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/parseAst.js:406:41)
+    at error (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/parseAst.js:402:42)
+    at Module.error (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/node-entry.js:17390:16)
+    at Module.traceVariable (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/node-entry.js:17823:29)
+    at ModuleScope.findVariable (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/node-entry.js:15413:39)
+    at Identifier.bind (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/node-entry.js:5449:40)
+    at CallExpression.bind (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/node-entry.js:2827:28)
+    at CallExpression.bind (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/node-entry.js:12522:15)
+    at VariableDeclarator.bind (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/node-entry.js:2831:23)
+    at VariableDeclaration.bind (file:///D:/code/viewstage-docs/node_modules/.pnpm/rollup@4.60.4/node_modules/rollup/dist/es/shared/node-entry.js:2827:28)
+鈥塃LIFECYCLE鈥?Command failed with exit code 1.

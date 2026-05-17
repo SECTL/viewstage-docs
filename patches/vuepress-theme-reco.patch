@@ -1,0 +1,38 @@
+diff --git a/lib/client/clientSetup.js b/lib/client/clientSetup.js
+index 840ccfb3b892017c6c24dc79682ce93239cdf755..b5a9c1dad71375ee4602bf04758effac6ab66969 100644
+--- a/lib/client/clientSetup.js
++++ b/lib/client/clientSetup.js
+@@ -1,7 +1,10 @@
+-import { computed, provide } from 'vue';
++import { ref, provide, watch } from 'vue';
+ import { usePageData, catalogSymbol, headersToCatalog, } from '@composables/index.js';
+ export function applyClientSetup() {
+     const page = usePageData();
+-    const catalog = computed(() => headersToCatalog(page.value.headers));
++    const catalog = ref(headersToCatalog(page.value.headers));
++    watch(() => page.value.headers, (val) => {
++        if (val) catalog.value = headersToCatalog(val);
++    });
+     provide(catalogSymbol, catalog);
+ }
+diff --git a/lib/node/pages.js b/lib/node/pages.js
+index 92b825304cc3be5c4817c20d496af11cff994421..cf867617397f66d9c48294d15ab57b672288c3ad 100644
+--- a/lib/node/pages.js
++++ b/lib/node/pages.js
+@@ -13,16 +13,4 @@ export const pages = [
+         layout: 'Categories',
+         pagination: 10,
+     },
+-    {
+-        path: '/timeline.html',
+-        layout: 'Timeline',
+-    },
+-    {
+-        path: '/posts.html',
+-        layout: 'Posts',
+-    },
+-    {
+-        path: '/friendship-link.html',
+-        layout: 'FriendshipLink',
+-    },
+ ];

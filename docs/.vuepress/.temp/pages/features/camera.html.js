@@ -1,0 +1,3 @@
+import comp from "D:/code/viewstage-docs/docs/.vuepress/.temp/pages/features/camera.html.vue"
+const data = JSON.parse("{\"path\":\"/features/camera.html\",\"title\":\"摄像头展台\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"功能概述\",\"slug\":\"功能概述\",\"link\":\"#功能概述\",\"children\":[]},{\"level\":2,\"title\":\"核心实现\",\"slug\":\"核心实现\",\"link\":\"#核心实现\",\"children\":[]},{\"level\":2,\"title\":\"功能列表\",\"slug\":\"功能列表\",\"link\":\"#功能列表\",\"children\":[]},{\"level\":2,\"title\":\"初始化流程\",\"slug\":\"初始化流程\",\"link\":\"#初始化流程\",\"children\":[]},{\"level\":2,\"title\":\"拍照流程\",\"slug\":\"拍照流程\",\"link\":\"#拍照流程\",\"children\":[]}],\"git\":{},\"filePathRelative\":\"features/camera.md\"}")
+export { comp, data }

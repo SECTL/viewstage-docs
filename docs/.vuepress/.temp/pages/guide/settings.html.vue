@@ -1,0 +1,129 @@
+<template><div><h1 id="设置面板" tabindex="-1"><a class="header-anchor" href="#设置面板"><span>设置面板</span></a></h1>
+<p>设置面板通过侧边栏按钮或快捷键打开，包含以下页面：</p>
+<h2 id="应用设置" tabindex="-1"><a class="header-anchor" href="#应用设置"><span>应用设置</span></a></h2>
+<h3 id="语言" tabindex="-1"><a class="header-anchor" href="#语言"><span>语言</span></a></h3>
+<ul>
+<li>支持简体中文、繁體中文、English</li>
+<li>切换后需重启应用</li>
+</ul>
+<h3 id="分辨率" tabindex="-1"><a class="header-anchor" href="#分辨率"><span>分辨率</span></a></h3>
+<ul>
+<li>应用显示分辨率</li>
+<li>可选预设分辨率或当前显示器最大分辨率</li>
+<li>更改后需重启应用</li>
+</ul>
+<h3 id="设置管理" tabindex="-1"><a class="header-anchor" href="#设置管理"><span>设置管理</span></a></h3>
+<ul>
+<li><strong>导出设置</strong>: 导出配置文件备份</li>
+<li><strong>导入设置</strong>: 从备份文件恢复设置</li>
+<li><strong>重置应用</strong>: 清除所有设置并重启</li>
+</ul>
+<h2 id="canvas-调节" tabindex="-1"><a class="header-anchor" href="#canvas-调节"><span>Canvas 调节</span></a></h2>
+<h3 id="帧率模式" tabindex="-1"><a class="header-anchor" href="#帧率模式"><span>帧率模式</span></a></h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>低帧率</td>
+<td>固定 30 FPS，省电省资源</td>
+</tr>
+<tr>
+<td>自适应</td>
+<td>根据绘制负载动态调节（20-60 FPS）</td>
+</tr>
+<tr>
+<td>高帧率</td>
+<td>固定 60 FPS，流畅绘制</td>
+</tr>
+</tbody>
+</table>
+<h3 id="钢笔效果" tabindex="-1"><a class="header-anchor" href="#钢笔效果"><span>钢笔效果</span></a></h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关闭</td>
+<td>均匀线宽，无笔锋</td>
+</tr>
+<tr>
+<td>限制</td>
+<td>有限笔锋效果，适合教学</td>
+</tr>
+<tr>
+<td>完整</td>
+<td>完整笔锋效果，适合精细绘图</td>
+</tr>
+</tbody>
+</table>
+<h3 id="画笔颜色" tabindex="-1"><a class="header-anchor" href="#画笔颜色"><span>画笔颜色</span></a></h3>
+<ul>
+<li>支持修改 15 个预设颜色</li>
+<li>内置取色器（HSV 选择）</li>
+<li>支持十六进制颜色输入</li>
+</ul>
+<h2 id="信号源调节" tabindex="-1"><a class="header-anchor" href="#信号源调节"><span>信号源调节</span></a></h2>
+<h3 id="摄像头设置" tabindex="-1"><a class="header-anchor" href="#摄像头设置"><span>摄像头设置</span></a></h3>
+<ul>
+<li><strong>默认摄像头</strong>: 选择默认摄像头设备</li>
+<li><strong>摄像头分辨率</strong>: 设置采集分辨率</li>
+<li><strong>画面镜像</strong>: 水平翻转画面</li>
+<li><strong>降噪帧数</strong>: 多帧降噪（1/3/5/7 帧）</li>
+<li><strong>降噪强度</strong>: 低/中/高</li>
+<li><strong>默认旋转角度</strong>: 0°/90°/180°/270°</li>
+</ul>
+<h3 id="pdf-设置" tabindex="-1"><a class="header-anchor" href="#pdf-设置"><span>PDF 设置</span></a></h3>
+<ul>
+<li><strong>PDF 输出分辨率</strong>: 2x-8x 可选</li>
+<li><strong>PDF 默认打开方式</strong>: 注册为默认 PDF 打开程序</li>
+<li><strong>Word 默认打开方式</strong>: 注册为默认 Word 打开程序</li>
+</ul>
+<h2 id="存储" tabindex="-1"><a class="header-anchor" href="#存储"><span>存储</span></a></h2>
+<h3 id="缓存管理" tabindex="-1"><a class="header-anchor" href="#缓存管理"><span>缓存管理</span></a></h3>
+<ul>
+<li>查看当前缓存大小</li>
+<li>手动清除缓存</li>
+<li>自动清除缓存设置（关闭/每天/每周/每半月/每月）</li>
+</ul>
+<h3 id="日志" tabindex="-1"><a class="header-anchor" href="#日志"><span>日志</span></a></h3>
+<ul>
+<li>打开日志目录查看日志文件</li>
+</ul>
+<h2 id="文档扫描设置" tabindex="-1"><a class="header-anchor" href="#文档扫描设置"><span>文档扫描设置</span></a></h2>
+<h3 id="基本设置" tabindex="-1"><a class="header-anchor" href="#基本设置"><span>基本设置</span></a></h3>
+<ul>
+<li>显示文档扫描按钮</li>
+<li>扫描质量（标准/高质量/超高质量）</li>
+<li>扫描模式（自动/手动）</li>
+<li>增强模式（自动/文本增强/照片增强/无）</li>
+</ul>
+<h3 id="模型管理" tabindex="-1"><a class="header-anchor" href="#模型管理"><span>模型管理</span></a></h3>
+<ul>
+<li>DBNet 文本检测模型（下载/删除）</li>
+<li>DexiNed 边界检测模型（导入/删除）</li>
+<li>UVDoc 文档矫正模型（下载/删除）</li>
+</ul>
+<h2 id="主题" tabindex="-1"><a class="header-anchor" href="#主题"><span>主题</span></a></h2>
+<ul>
+<li><strong>深色主题</strong>: 暗色调界面</li>
+<li><strong>简化主题</strong>: 简洁明亮界面（默认）</li>
+</ul>
+<h2 id="关于" tabindex="-1"><a class="header-anchor" href="#关于"><span>关于</span></a></h2>
+<ul>
+<li>版本号</li>
+<li>GitHub 链接</li>
+<li>开源许可</li>
+<li>检查更新</li>
+</ul>
+</div></template>
+
+
