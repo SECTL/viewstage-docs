@@ -39,3 +39,7 @@ example/
 
 # Trae config
 .trae/
+
+# VuePress temp and cache
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/

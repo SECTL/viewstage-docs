@@ -1,3 +1,0 @@
-import comp from "D:/code/viewstage-docs/docs/.vuepress/.temp/pages/guide/keyboard-shortcuts.html.vue"
-const data = JSON.parse("{\"path\":\"/guide/keyboard-shortcuts.html\",\"title\":\"键盘快捷键\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"模式切换\",\"slug\":\"模式切换\",\"link\":\"#模式切换\",\"children\":[]},{\"level\":2,\"title\":\"编辑操作\",\"slug\":\"编辑操作\",\"link\":\"#编辑操作\",\"children\":[]},{\"level\":2,\"title\":\"源切换\",\"slug\":\"源切换\",\"link\":\"#源切换\",\"children\":[]},{\"level\":2,\"title\":\"摄像头\",\"slug\":\"摄像头\",\"link\":\"#摄像头\",\"children\":[]},{\"level\":2,\"title\":\"界面\",\"slug\":\"界面\",\"link\":\"#界面\",\"children\":[]}],\"git\":{},\"filePathRelative\":\"guide/keyboard-shortcuts.md\"}")
-export { comp, data }
